@@ -94,42 +94,42 @@ angular.module('ui.bootstrap.timepicker', [])
   }
 
   $scope.noIncrementHours = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var incrementedSelected = addMinutes(selected, hourStep * 60);
     return disabled || incrementedSelected > max ||
       incrementedSelected < selected && incrementedSelected < min;
   };
 
   $scope.noDecrementHours = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var decrementedSelected = addMinutes(selected, -hourStep * 60);
     return disabled || decrementedSelected < min ||
       decrementedSelected > selected && decrementedSelected > max;
   };
 
   $scope.noIncrementMinutes = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var incrementedSelected = addMinutes(selected, minuteStep);
     return disabled || incrementedSelected > max ||
       incrementedSelected < selected && incrementedSelected < min;
   };
 
   $scope.noDecrementMinutes = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var decrementedSelected = addMinutes(selected, -minuteStep);
     return disabled || decrementedSelected < min ||
       decrementedSelected > selected && decrementedSelected > max;
   };
 
   $scope.noIncrementSeconds = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var incrementedSelected = addSeconds(selected, secondStep);
     return disabled || incrementedSelected > max ||
       incrementedSelected < selected && incrementedSelected < min;
   };
 
   $scope.noDecrementSeconds = function() {
-	if ($scope.preventDisable) return false;
+	if ($scope.preventDisable) { return false; }
     var decrementedSelected = addSeconds(selected, -secondStep);
     return disabled || decrementedSelected < min ||
       decrementedSelected > selected && decrementedSelected > max;
